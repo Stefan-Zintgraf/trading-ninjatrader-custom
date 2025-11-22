@@ -1,0 +1,4 @@
+*.dll
+*.pdb
+/NinjaTrader.Custom.xml
+/NinjaTrader.Vendor.cs
