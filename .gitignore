@@ -2,3 +2,6 @@
 *.pdb
 /NinjaTrader.Custom.xml
 /NinjaTrader.Vendor.cs
+.vs
+bin
+obj
