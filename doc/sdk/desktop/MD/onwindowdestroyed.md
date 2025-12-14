@@ -1,0 +1,76 @@
+**Path**: [NTTabPage Class](./nttabpage.md) > [OnWindowDestroyed()](./onwindowdestroyed.md)
+
+# OnWindowDestroyed()
+
+# OnWindowDestroyed()
+
+## [Definition](./onwindowdestroyed.md)
+
+This method is called whenever a new **NTWindow** is destroyed. It will be called in the thread of that window. A window is destroyed either by the user closing the window, closing a workspace, or on a shut down of NinjaTrader.
+
+![note image](/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FNote.57c6078c.svg&w=64&q=75)
+
+## Note
+
+This method will also be called on a recompile of the NinjaTrader.Custom project (e.g., when you compile an indicator, strategy, or add\-on)
+
+## [Method Return Value](./onwindowdestroyed.md)
+
+This method does not return a value.
+
+## [Syntax](./onwindowdestroyed.md)
+
+`OnWindowDestroyed(Window window)`
+
+## [Parameters](./onwindowdestroyed.md)
+
+**Parameter**
+
+**Description**
+
+**window**
+
+A Window object which is being removed from the workspace
+
+## [Examples](./onwindowdestroyed.md)
+
+```csharp
+public class MyWindowAddOn : AddOnBase
+{
+    private NTMenuItem myMenuItem;
+    private NTMenuItem existingMenuItem;
+
+    protected override void OnStateChange()
+    {
+        if (State == State.SetDefaults)
+        {
+            Description = "Our custom MyWindow add on";
+            Name = "MyWindow";
+        }
+    }
+
+    // Will be called as a new NTWindow is destroyed. It will be called in the thread of that window
+    protected override void OnWindowDestroyed(Window window)
+    {
+        if (myMenuItem != null && window is ControlCenter)
+        {
+            if (existingMenuItem != null && existingMenuItem.Items.Contains(myMenuItem))
+                existingMenuItem.Items.Remove(myMenuItem);
+
+            myMenuItem.Click -= OnMenuItemClick;
+            myMenuItem = null;
+        }
+    }
+}
+
+```
+
+![copy](/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCopy.82606927.svg&w=48&q=75)
+
+#### ON THIS PAGE
+
+*   [Definition](./onwindowdestroyed.md)
+*   [Method Return Value](./onwindowdestroyed.md)
+*   [Syntax](./onwindowdestroyed.md)
+*   [Parameters](./onwindowdestroyed.md)
+*   [Examples](./onwindowdestroyed.md)

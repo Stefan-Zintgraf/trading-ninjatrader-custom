@@ -62,16 +62,16 @@
       <HintPath>C:\Users\s.zintgraf.ACONTIS\Documents\NinjaTrader 8\bin\Custom\NinjaTrader.Vendor.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase">
-      <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\WindowsBase.dll</HintPath>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\WindowsBase.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
-      <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\PresentationCore.dll</HintPath>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\PresentationCore.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework">
-      <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\PresentationFramework.dll</HintPath>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\PresentationFramework.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationProvider">
-      <HintPath>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF\UIAutomationProvider.dll</HintPath>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\UIAutomationProvider.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +371,8 @@
     <Compile Include="Indicators\MhvnIndi.cs" />
     <Compile Include="Indicators\MovingBars.cs" />
     <Compile Include="Indicators\SimbaIndi.cs" />
+    <Compile Include="Strategies\TestStrategy.cs" />
+    <Compile Include="obj\x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resource.resx">

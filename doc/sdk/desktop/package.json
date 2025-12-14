@@ -1,0 +1,14 @@
+{
+  "name": "ninjatrader-docs-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes NinjaTrader documentation for offline viewing.",
+  "main": "scrape.js",
+  "scripts": {
+    "start": "node scrape.js"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "puppeteer-core": "^10.4.0",
+    "turndown": "^5.0.0"
+  }
+}

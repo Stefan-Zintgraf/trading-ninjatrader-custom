@@ -1,0 +1,43 @@
+**Path**: [SuperDOM Column](./superdom_column.md) > [OnRestoreValues()](./onrestorevalues.md)
+
+# OnRestoreValues()
+
+# OnRestoreValues()
+
+## [Definition](./onrestorevalues.md)
+
+Called when the column is restored (e.g. from a workspace). All public properties in a SuperDOM Column are saved to the workspace upon closing and selecting save. You may choose to do something explicit with a certain property when the **OnRestoreValues()** method is called.
+
+## [Method Return Value](./onrestorevalues.md)
+
+This method does not return a value.
+
+## [Syntax](./onrestorevalues.md)
+
+You may override the method in your SuperDOM column with the following syntax:
+
+`public override void OnRestoreValues()`
+
+## [Parameters](./onrestorevalues.md)
+
+This method does not require any parameters.
+
+## [Examples](./onrestorevalues.md)
+
+```csharp
+public override void OnRestoreValues()
+{
+   // Do something with the restored values. Can also trigger a repaint via OnPropertyChanged()
+}
+
+```
+
+![copy](/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCopy.82606927.svg&w=48&q=75)
+
+#### ON THIS PAGE
+
+*   [Definition](./onrestorevalues.md)
+*   [Method Return Value](./onrestorevalues.md)
+*   [Syntax](./onrestorevalues.md)
+*   [Parameters](./onrestorevalues.md)
+*   [Examples](./onrestorevalues.md)

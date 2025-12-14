@@ -1,0 +1,60 @@
+**Path**: [ChartControl](./chartcontrol.md) > [CanvasZoomState](./canvaszoomstate.md)
+
+# CanvasZoomState
+
+# CanvasZoomState
+
+## [Definition](./canvaszoomstate.md)
+
+Indicates the current state of the Zoom tool on the chart. This property reveals the state of the tool while it is in use, and does not indicate a chart is zoomed in on or not. As soon as a zoom action is completed, the tool is considered to be no longer in use.
+
+## [Property Value](./canvaszoomstate.md)
+
+An enum representing the state of the Zoom tool on the chart. Possible values are listed below:
+
+State
+
+Description
+
+None
+
+The Zoom tool is not currently being used
+
+Selected
+
+The Zoom tool is selected, but has not yet been used to zoom in
+
+DrawingRectangle
+
+The Zoom tool is currently in use (User is currently drawing the rectangle in which to zoom)
+
+## [Syntax](./canvaszoomstate.md)
+
+`<chartcontrol>.CanvasZoomState`
+
+## [Examples](./canvaszoomstate.md)
+
+```csharp
+protected override void OnRender(ChartControl chartControl, ChartScale chartScale)
+{
+    CanvasZoomState zoomState = chartControl.CanvasZoomState;
+
+    // Trigger an alert while a user is zooming in on a chart
+    if (zoomState == CanvasZoomState.DrawingRectangle)
+        Alert("zoomAlert", Priority.Medium, "Make sure to zoom in on the entire chart pattern!", " ", 60, Brushes.White, Brushes.Black);
+}
+
+```
+
+![copy](/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCopy.82606927.svg&w=48&q=75)
+
+Based on the image below, CanvasZoomState confirms that the Zoom rectangle is currently being drawn:
+
+![ChartControl_CanvasZoomState](https://cdn.sanity.io/images/1hlwceal/production/149b0b3e218b3ffe4ec6d9122f83cbe072ea0f17-525x425.png)
+
+#### ON THIS PAGE
+
+*   [Definition](./canvaszoomstate.md)
+*   [Property Value](./canvaszoomstate.md)
+*   [Syntax](./canvaszoomstate.md)
+*   [Examples](./canvaszoomstate.md)
